@@ -2,8 +2,7 @@ package com.luv2code.springdemo;
 
 public class MyApp {
     public static void main(String[] args){
-        BaseballCoach theCoach = new TrackCoach();
+        SoccerCoach theCoach = new SoccerCoach();
         System.out.println(theCoach.getDailyWorkout());
-
     }
 }
