@@ -26,7 +26,7 @@
 
     </bean>
     <bean id = "myCoach"
-          class="com.luv2code.springdemo.SoccerCoach">
+          class="com.luv2code.springdemo.TrackCoach">
           <!-- set up constructor injection -->
         <constructor-arg ref = "myFortune" />
     </bean>

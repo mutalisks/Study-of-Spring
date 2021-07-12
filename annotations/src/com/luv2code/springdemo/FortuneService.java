@@ -1,6 +1,5 @@
 package com.luv2code.springdemo;
 
 public interface FortuneService {
-
-    public int getFortune();
+    public String getFortune();
 }
