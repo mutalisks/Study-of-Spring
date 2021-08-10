@@ -25,14 +25,26 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
+
 	</bean>
 
+	<!-- load custom message resources -->
+	<bean id="messageSource"
+		  class="org.springframework.context.support.ResourceBundleMessageSource">
+
+		<property name="basenames" value="resources.message"/>
+	</bean>
 	<!-- extra step: put photo on the site -->
 	<mvc:resources mapping="/resources/**" location="/resources/">
 	</mvc:resources>
 
 	<!-- load the properties -->
 	<util:properties id="countryOptions" location="classpath:../countries.properties" />
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	<mvc:annotation-driven validator="validator"/>
+
+
 </beans>
 
 
